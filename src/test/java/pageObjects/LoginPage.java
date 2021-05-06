@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -15,26 +16,33 @@ public class LoginPage {
 		PageFactory.initElements(rdriver, this);
 	}
 	
-	@FindBy(id = "Email")
+	@FindBy(xpath = "//input[@name='username']")
 	@CacheLookup
-	WebElement txtEmail;
+	WebElement txtUsername;
 
-	@FindBy(id = "Password")
+	@FindBy(xpath="//input[@name='password']")
 	@CacheLookup
 	WebElement txtPassword;
 
-	@FindBy(xpath = "//button[contains(text(),'Log in')]")
+	@FindBy(xpath = "//a[contains(text(),'Sign In')]")
 	@CacheLookup
-	WebElement btnLogin;
+	WebElement LinkSignIn;
 
 	@FindBy(linkText = "Logout")
 	@CacheLookup
 	WebElement lnkLogout;
 	
+	@FindBy(xpath = "//input[@name='signon']")
+	@CacheLookup
+	WebElement LinkLogIn;
+	
+	@FindBy(xpath = "//a[contains(text(),'Sign Out')]")
+	@CacheLookup
+	WebElement LinkSignOut;
 	
 	public void setUserName(String uname) {
-		txtEmail.clear();
-		txtEmail.sendKeys(uname);
+		txtUsername.clear();
+		txtUsername.sendKeys(uname);
 
 	}
 
@@ -43,12 +51,18 @@ public class LoginPage {
 		txtPassword.sendKeys(pwd);
 	}
 
+	public void clickSignIn() {
+		LinkSignIn.click();
+	}
+
 	public void clickLogin() {
-		btnLogin.click();
+		LinkLogIn.click();
 	}
 
 	public void clickLogout() {
-		lnkLogout.click();
+		LinkSignOut.click();
 	}
+	
+	
 	
 }

@@ -2,26 +2,16 @@ Feature: Login
 
 Scenario: Successful Login with Valid Credentials 
 	Given User Launch Chrome browser 
-	When User opens URL "http://admin-demo.nopcommerce.com/login" 
-	And User enters Email as "admin@yourstore.com" and Password as "admin" 
+	When User opens URL "https://petstore.octoperf.com/" 
+	And Clicks on Enter the store link
+	Then Page Url should be "https://petstore.octoperf.com/actions/Catalog.action"
+	When Click on sign in link
+	Then Page Url should be "https://petstore.octoperf.com/actions/Account.action"
+	And User enters Username as "sakshi17" and Password as "pass" 
 	And Click on Login 
-	Then Page Title should be "Dashboard / nopCommerce administration" 
+	Then Page Url should be "https://petstore.octoperf.com/actions/Catalog.action" 
 	When User click on Log out link 
-	Then Page Title should be "Your store. Login" 
+	Then Page Url should be "https://petstore.octoperf.com/actions/Catalog.action" 
 	And close browser 
 	
 	
-Scenario Outline: Login Data Driven 
-	Given User Launch Chrome browser 
-	When User opens URL "http://admin-demo.nopcommerce.com/login" 
-	And User enters Email as "<email>" and Password as "<password>" 
-	And Click on Login 
-	Then Page Title should be "Dashboard / nopCommerce administration" 
-	When User click on Log out link 
-	Then Page Title should be "Your store. Login" 
-	And close browser 
-	
-	Examples: 
-		| email | password |
-		| admin@yourstore.com	|	admin |
-		| admin1@yourstore.com | admin123	|
