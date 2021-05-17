@@ -8,6 +8,7 @@ import org.testng.Assert;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects.CreateNew;
 import pageObjects.FirstSample;
 import pageObjects.ThirdSample;
 
@@ -16,6 +17,7 @@ public class StepQuiz {
 	public WebDriver driver;
 	public ThirdSample third;
 	public FirstSample first;
+	public CreateNew createNewPage;
 
 	
 	//third sample quiz step defs
@@ -132,6 +134,7 @@ public class StepQuiz {
 	
 	@When("^Clicks on A first sample quiz button$")
 	public void clicks_on_A_first_sample_quiz_button() throws Throwable {
+		first = new FirstSample(driver);
 		first.clickBtnFirstQiz();
 }
 
@@ -160,15 +163,53 @@ public class StepQuiz {
 		}
 		else if(arg2.equals("No one"))
 		{
+			Thread.sleep(3000);
 			first.getOption5();
 
 		}
 		else if(arg2.equals("I am a rockstar"))
 		{
+			Thread.sleep(3000);
+
 			first.getOption6();
 
 		}
 
 	}
+	
+	
+	//create new step defs
+	@When("^click add new button$")
+	public void click_add_new_button() throws Throwable {
+		createNewPage = new CreateNew(driver);
+		createNewPage.CreateNewOne();
+	}
+
+	@When("^give name to quiz$")
+	public void give_name_to_quiz() throws Throwable {
+		createNewPage.QuizName("new new");
+	}
+
+	@Then("^save page loaded$")
+	public void save_page_loaded() throws Throwable {
+		createNewPage.NameOk();
+	}
+
+	@When("^save quiz$")
+	public void save_quiz() throws Throwable {
+		 Thread.sleep(3000);
+
+		createNewPage.SaveQuiz();
+	}
+
+	@Then("^fresh page is loaded$")
+	public void fresh_page_is_loaded() throws Throwable {
+		if(createNewPage.Existing()) {
+			  System.out.println("sucess");
+		  }
+		  else
+			  System.out.println("failed");
+	}
+
 
 }

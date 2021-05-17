@@ -30,7 +30,7 @@ Feature: FirstSample
     And close browser
 
     Examples: 
-      | answer1 | answer2                         |
-      | Love   | No one                        |
-      | 42   | No one |
+      | answer1 | answer2        |
+      | Love   | I am a rockstar   |
+      
      
