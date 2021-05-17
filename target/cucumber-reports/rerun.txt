@@ -1,1 +1,1 @@
-Second.feature:17:34 FirstSample.feature:34
+FirstSample.feature:34

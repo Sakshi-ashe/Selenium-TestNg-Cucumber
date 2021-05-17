@@ -3,7 +3,7 @@ Feature: secondSample
   Scenario Outline: Correct answers
     Given User Launch Chrome browser
     When User opens URL "http://localhost:4200/start"
-    And Clicks on A first sample quiz button
+    And Clicks on A second sample quiz button
     Then Page Url should be "http://localhost:4200/play/a-second-sample-quizz"
     Then Enter answer for quizTwo QFirst as "<answer1>" and QSecond as "<answer2>"
     Then Page Url should be "http://localhost:4200/result"
@@ -20,7 +20,7 @@ Feature: secondSample
  Scenario Outline: InCorrect answers
     Given User Launch Chrome browser
     When User opens URL "http://localhost:4200/start"
-    And Clicks on A first sample quiz button
+    And Clicks on A second sample quiz button
     Then Page Url should be "http://localhost:4200/play/a-second-sample-quizz"
     Then Enter answer for quizTwo QFirst as "<answer1>" and QSecond as "<answer2>"
     Then Page Url should be "http://localhost:4200/result"

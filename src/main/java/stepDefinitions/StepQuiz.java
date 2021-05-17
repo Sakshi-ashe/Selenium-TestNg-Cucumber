@@ -10,6 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageObjects.CreateNew;
 import pageObjects.FirstSample;
+import pageObjects.SecondSample;
 import pageObjects.ThirdSample;
 
 public class StepQuiz {
@@ -17,6 +18,7 @@ public class StepQuiz {
 	public WebDriver driver;
 	public ThirdSample third;
 	public FirstSample first;
+	public SecondSample second;
 	public CreateNew createNewPage;
 
 	
@@ -158,6 +160,7 @@ public class StepQuiz {
 		
 		if(arg2.equals("Love"))
 		{
+			Thread.sleep(3000);
 			first.getOption4();
 
 		}
@@ -212,4 +215,50 @@ public class StepQuiz {
 	}
 
 
+	//second sample step defs
+	@When("^Clicks on A second sample quiz button$")
+	public void clicks_on_A_second_sample_quiz_button() throws Throwable {
+		second = new SecondSample(driver);
+		second.clickBtnSecondQiz();
+}
+
+	
+	@Then("^Enter answer for quizTwo QFirst as \"([^\"]*)\" and QSecond as \"([^\"]*)\"$")
+	public void enter_answer_for_quizTwo_QFirst_as_and_QSecond_as(String arg1, String arg2) throws Throwable {
+
+		if(arg1.equals("What?"))
+		{
+			second.clickBtnQues1Option1();
+		}
+		else if(arg1.equals("Exactly 1"))
+		{
+			second.clickBtnQues1Option2();
+
+		}
+		else if(arg1.equals("1"))
+		{
+			second.clickBtnQues1Option3();
+
+		}
+		
+		if(arg2.equals("Because I am driving a Ferrari"))
+		{
+			second.clickBtnQues2Option1();
+
+		}
+		else if(arg2.equals("Reasons"))
+		{
+			Thread.sleep(3000);
+			second.clickBtnQues2Option2();
+
+		}
+		else if(arg2.equals("I am a secret agent, can't tell you"))
+		{
+			Thread.sleep(3000);
+
+			second.clickBtnQues2Option3();
+
+		}
+
+	}
 }
