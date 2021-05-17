@@ -1,0 +1,9 @@
+stepDefinitions/Steps2.class
+pageObjects/LoginPage.class
+pageObjects/HomePage.class
+pageObjects/AddCustomerPage.class
+testRunner/TestRun.class
+pageObjects/SignUpPage.class
+pageObjects/CatalogLinksPage.class
+utilities/WaitHelper.class
+pageObjects/SearchCustomerPage.class

@@ -1,0 +1,136 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Successful Register with Valid Credentials",
+        "description": "",
+        "id": "signup1;successful-register-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "User Launch Chrome browser",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "User opens URL \"https://petstore.octoperf.com/\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Clicks on Enter the store link",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Page Url should be \"https://petstore.octoperf.com/actions/Catalog.action\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Click on sign in link",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Page Url should be \"https://petstore.octoperf.com/actions/Account.action\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user click on register now",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "Page Url should be \"https://petstore.octoperf.com/actions/Account.action?newAccountForm\u003d\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "enters form details  userid \"sakshi20\", pass \"pass\", repPass \"pass\", fn \"Sakshi\", ln \"Gupta\", email \"sakshi20@gmail.com\",phn \"7070707070\",add \"add1\",\t address \"add2\",\t\t city \"agra\",\t\t state \"UttarPradesh\"\t\t,\t zip \"12345\",\t\t\t country \"India\",\t\t\t\t lang \"english\",\t\t Pref \"DOGS\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "User click on submit details link",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Page Url should be \"https://petstore.octoperf.com/actions/Catalog.action\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "close browser",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Test01"
+          }
+        ]
+      }
+    ],
+    "name": "Signup1",
+    "description": "",
+    "id": "signup1",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/Signup1.feature"
+  }
+]

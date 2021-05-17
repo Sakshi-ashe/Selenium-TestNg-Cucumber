@@ -1,0 +1,312 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 17,
+        "name": "Correct answers",
+        "description": "",
+        "id": "secondsample;correct-answers;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1196490443,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User Launch Chrome browser",
+            "match": {
+              "location": "StepQuiz.user_Launch_Chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1918601231,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User opens URL \"http://localhost:4200/start\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/start",
+                  "offset": 16
+                }
+              ],
+              "location": "StepQuiz.user_opens_URL(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1179902,
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"pageObjects.FirstSample.clickBtnFirstQiz()\" because \"this.first\" is null\n\tat stepDefinitions.StepQuiz.clicks_on_A_first_sample_quiz_button(StepQuiz.java:135)\n\tat ✽.And Clicks on A first sample quiz button(src/main/java/Features/Second.feature:6)\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "Clicks on A first sample quiz button",
+            "match": {
+              "location": "StepQuiz.clicks_on_A_first_sample_quiz_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Page Url should be \"http://localhost:4200/play/a-second-sample-quizz\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/play/a-second-sample-quizz",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Enter answer for quizTwo QFirst as \"What?\" and QSecond as \"Reasons\"",
+            "match": {},
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Page Url should be \"http://localhost:4200/result\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/result",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "check you passed the quiz",
+            "match": {
+              "location": "StepQuiz.check_you_passed_the_quiz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Click on TryAgain button",
+            "match": {
+              "location": "StepQuiz.click_on_TryAgain_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Page Url should be \"http://localhost:4200/start\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/start",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "close browser",
+            "match": {
+              "location": "StepQuiz.close_browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "InCorrect answers",
+        "description": "",
+        "id": "secondsample;incorrect-answers;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 519870203,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User Launch Chrome browser",
+            "match": {
+              "location": "StepQuiz.user_Launch_Chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1958627536,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User opens URL \"http://localhost:4200/start\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/start",
+                  "offset": 16
+                }
+              ],
+              "location": "StepQuiz.user_opens_URL(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 229245,
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"pageObjects.FirstSample.clickBtnFirstQiz()\" because \"this.first\" is null\n\tat stepDefinitions.StepQuiz.clicks_on_A_first_sample_quiz_button(StepQuiz.java:135)\n\tat ✽.And Clicks on A first sample quiz button(src/main/java/Features/Second.feature:23)\n",
+              "status": "failed"
+            },
+            "line": 23,
+            "name": "Clicks on A first sample quiz button",
+            "match": {
+              "location": "StepQuiz.clicks_on_A_first_sample_quiz_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "Page Url should be \"http://localhost:4200/play/a-second-sample-quizz\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/play/a-second-sample-quizz",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "Enter answer for quizTwo QFirst as \"1\" and QSecond as \"Reasons\"",
+            "match": {},
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "Page Url should be \"http://localhost:4200/result\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/result",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "check you failed the quiz",
+            "match": {
+              "location": "StepQuiz.check_you_failed_the_quiz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "Click on TryAgain button",
+            "match": {
+              "location": "StepQuiz.click_on_TryAgain_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Page Url should be \"http://localhost:4200/start\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://localhost:4200/start",
+                  "offset": 20
+                }
+              ],
+              "location": "StepQuiz.page_Url_should_be(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "close browser",
+            "match": {
+              "location": "StepQuiz.close_browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "secondSample",
+    "description": "",
+    "id": "secondsample",
+    "keyword": "Feature",
+    "uri": "src/main/java/Features/Second.feature"
+  }
+]
